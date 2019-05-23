@@ -11,15 +11,17 @@ class Queue :
         return self.items == []
     def size(self) :
         return len(self.items)
+
 class lens :
     def __init__(self, tp, focus, l):
         lens.tp = tp
         lens.focus = focus
         lens.l = l
+        
 total = Queue()
 print('렌즈의 개수는 몇개인가요?')
 n = int(input())
-for i in range (1,n + 1):
+for i in range(1, n + 1):
     print('렌즈',i,'의 종류는 무엇인가요?(오목, 볼록 중 골라 주세요.)')
     tp = str(input())
     print('렌즈',i,'의 초점거리(절댓값)는 얼마인가요?')
