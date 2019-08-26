@@ -1,3 +1,4 @@
+#기본적인 큐
 class Queue :
     def __init__(self) :
         self.items = []
@@ -19,15 +20,12 @@ class lens :
         lens.l = l
         
 total = Queue()
-print('렌즈의 개수는 몇개인가요?')
-n = int(input())
+#구현할 렌즈의 정보 받기
+n = int(input("렌즈의 개수는 몇개인가요?"))
 for i in range(1, n + 1):
-    print('렌즈',i,'의 종류는 무엇인가요?(오목, 볼록 중 골라 주세요.)')
-    tp = str(input())
-    print('렌즈',i,'의 초점거리(절댓값)는 얼마인가요?')
-    focus = int(input())
-    print('렌즈',i-1,'과 렌즈',i,'사이의 거리는 얼마인가요?(렌즈 0 은 물체 입니다.)')
-    l = int(input())
+    tp = str(input("렌즈',i,'의 종류는 무엇인가요?(오목, 볼록 중 골라 주세요.)"))
+    focus = int(input("렌즈',i,'의 초점거리(절댓값)는 얼마인가요?"))
+    l = int(input("렌즈',i-1,'과 렌즈',i,'사이의 거리는 얼마인가요?(렌즈 0 은 물체 입니다.)"))
     a = lens(tp,focus,l)
     total.enqueue(a)
 fl = total.dequeue()
